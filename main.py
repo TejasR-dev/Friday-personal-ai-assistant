@@ -21,7 +21,7 @@ def speak_old(text):
 
 
 # Directly configure Gemini API key
-genai.configure(api_key="AIzaSyDQYXxV49hwoJghhYHqeubcZ0zhJDuUUI0")
+genai.configure(api_key="<Your_Api_Key>")
 
 # Load the Gemini model
 model = genai.GenerativeModel("gemini-pro")
