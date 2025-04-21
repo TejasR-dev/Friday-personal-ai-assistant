@@ -1,0 +1,7 @@
+SpeechRecognition
+pyttsx3
+PyAudio
+setuptools
+google-generativeai
+pipwin
+pyaudio
