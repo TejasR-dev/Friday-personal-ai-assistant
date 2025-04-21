@@ -3,7 +3,7 @@ import pyaudio
 import setuptools
 import pyttsx3
 import webbrowser as wb
-import musiclibrary
+# import musiclibrary
 import os
 import google 
 # from google import genai
@@ -21,7 +21,7 @@ def speak_old(text):
 
 
 # Directly configure Gemini API key
-genai.configure(api_key="<Your_Api_Key>")
+genai.configure(api_key="AIzaSyDQYXxV49hwoJghhYHqeubcZ0zhJDuUUI0")
 
 # Load the Gemini model
 model = genai.GenerativeModel("gemini-pro")
@@ -49,14 +49,14 @@ def processcommand(c):
     elif "open edge" in c.lower():
         speak_old(f"Executing {c}")
         wb.open("https://google.com")
-    elif c.lower().startswith("play"):
-        speak_old(f"Executing {c}")
-        try:
-            song=c.lower().split(" ")[1]
-            link=musiclibrary.music[song]
-            wb.open(link)
-        except Exception as e:
-            speak_old("error in execution")
+    # elif c.lower().startswith("play"):
+    #     speak_old(f"Executing {c}")
+    #     try:
+    #         song=c.lower().split(" ")[1]
+    #         link=musiclibrary.music[song]
+    #         wb.open(link)
+    #     except Exception as e:
+    #         speak_old("error in execution")
     elif "file" in c.lower():
         try:
             speak_old(f"opening {c} file")
